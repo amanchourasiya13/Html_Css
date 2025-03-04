@@ -1,0 +1,88 @@
+/* Apply box-sizing to all elements */
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+/* Flexbox container settings */
+html {
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #00539F;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #FF9500;
+    padding: 0 20px 28px;
+    border: 5px solid black;
+}
+
+/* Header and Footer */
+header, footer {
+    background: yellowgreen;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* Main layout */
+#main {
+    display: flex;
+    flex: 1;
+}
+
+/* Article takes up most of the space */
+#main > article {
+    flex: 1;
+    order: 1;
+}
+
+/* Sidebar (Aside) and Navigation (Nav) */
+#main > nav, 
+#main > aside {
+    flex: 0 0 20vw;
+}
+
+#main > nav {
+    background: #D7E8D4;
+    order: 3;
+}
+
+#main > aside {
+    background: beige;
+    order: 2;
+}
+
+/* Common styles */
+header, footer, article, nav, aside {
+    padding: 1em;
+    text-align: center;
+}
+
+/* Typography */
+h1 {
+    font-size: 60px;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+    color: #00539f;
+    text-shadow: 3px 3px 1px black;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+p, li {
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
+}
